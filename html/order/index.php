@@ -25,6 +25,193 @@
 
 <main>
     <h1 class="title">Waar heeft u vandaag zin in?</h1>
+    <div class="cart">
+        <img src="/images/cart.svg" alt="cart image">
+        <div class="cart-amount">X</div>
+    </div>
+    <div class="category-bar">
+        <button>CATEGORY</button>
+        <button>CATEGORY</button>
+        <button>CATEGORY</button>
+        <button>CATEGORY</button>
+        <button>CATEGORY</button>
+        <button>CATEGORY</button>
+        <button>CATEGORY</button>
+        <button>CATEGORY</button>
+        <button>CATEGORY</button>
+        <button>CATEGORY</button>
+    </div>
+
+    <div class="item-list">
+        <div class="item-container">
+            <div class="item"></div>
+            <h2>ITEM NAME</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur facilisis tincidunt. Ut
+                blandit arcu volutpat lacus vulputate, a commodo. </p>
+            <button class="button-remove"></button>
+            <button class="button-add"></button>
+        </div>
+        <div class="item-container">
+            <div class="item"></div>
+            <h2>ITEM NAME</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur facilisis tincidunt. Ut
+                blandit arcu volutpat lacus vulputate, a commodo. </p>
+            <button class="button-remove"></button>
+            <button class="button-add"></button>
+        </div>
+        <div class="item-container">
+            <div class="item"></div>
+            <h2>ITEM NAME</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur facilisis tincidunt. Ut
+                blandit arcu volutpat lacus vulputate, a commodo. </p>
+            <button class="button-remove"></button>
+            <button class="button-add"></button>
+        </div>
+        <div class="item-container">
+            <div class="item"></div>
+            <h2>ITEM NAME</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur facilisis tincidunt. Ut
+                blandit arcu volutpat lacus vulputate, a commodo. </p>
+            <button class="button-remove"></button>
+            <button class="button-add"></button>
+        </div>
+        <div class="item-container">
+            <div class="item"></div>
+            <h2>ITEM NAME</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur facilisis tincidunt. Ut
+                blandit arcu volutpat lacus vulputate, a commodo. </p>
+            <button class="button-remove"></button>
+            <button class="button-add"></button>
+        </div>
+        <div class="item-container">
+            <div class="item"></div>
+            <h2>ITEM NAME</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur facilisis tincidunt. Ut
+                blandit arcu volutpat lacus vulputate, a commodo. </p>
+            <button class="button-remove"></button>
+            <button class="button-add"></button>
+        </div>
+        <div class="item-container">
+            <div class="item"></div>
+            <h2>ITEM NAME</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur facilisis tincidunt. Ut
+                blandit arcu volutpat lacus vulputate, a commodo. </p>
+            <button class="button-remove"></button>
+            <button class="button-add"></button>
+        </div>
+        <div class="item-container">
+            <div class="item"></div>
+            <h2>ITEM NAME</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur facilisis tincidunt. Ut
+                blandit arcu volutpat lacus vulputate, a commodo. </p>
+            <button class="button-remove"></button>
+            <button class="button-add"></button>
+        </div>
+        <div class="item-container">
+            <div class="item"></div>
+            <h2>ITEM NAME</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur facilisis tincidunt. Ut
+                blandit arcu volutpat lacus vulputate, a commodo. </p>
+            <button class="button-remove"></button>
+            <button class="button-add"></button>
+        </div>
+        <div class="item-container">
+            <div class="item"></div>
+            <h2>ITEM NAME</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur facilisis tincidunt. Ut
+                blandit arcu volutpat lacus vulputate, a commodo. </p>
+            <button class="button-remove"></button>
+            <button class="button-add"></button>
+        </div>
+        <div class="item-container">
+            <div class="item"></div>
+            <h2>ITEM NAME</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur facilisis tincidunt. Ut
+                blandit arcu volutpat lacus vulputate, a commodo. </p>
+            <button class="button-remove"></button>
+            <button class="button-add"></button>
+        </div>
+        <div class="item-container">
+            <div class="item"></div>
+            <h2>ITEM NAME</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur facilisis tincidunt. Ut
+                blandit arcu volutpat lacus vulputate, a commodo. </p>
+            <button class="button-remove"></button>
+            <button class="button-add"></button>
+        </div>
+        <div class="item-container">
+            <div class="item"></div>
+            <h2>ITEM NAME</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur facilisis tincidunt. Ut
+                blandit arcu volutpat lacus vulputate, a commodo. </p>
+            <button class="button-remove"></button>
+            <button class="button-add"></button>
+        </div>
+        <div class="item-container">
+            <div class="item"></div>
+            <h2>ITEM NAME</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur facilisis tincidunt. Ut
+                blandit arcu volutpat lacus vulputate, a commodo. </p>
+            <button class="button-remove"></button>
+            <button class="button-add"></button>
+        </div>
+        <div class="item-container">
+            <div class="item"></div>
+            <h2>ITEM NAME</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur facilisis tincidunt. Ut
+                blandit arcu volutpat lacus vulputate, a commodo. </p>
+            <button class="button-remove"></button>
+            <button class="button-add"></button>
+        </div>
+        <div class="item-container">
+            <div class="item"></div>
+            <h2>ITEM NAME</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur facilisis tincidunt. Ut
+                blandit arcu volutpat lacus vulputate, a commodo. </p>
+            <button class="button-remove"></button>
+            <button class="button-add"></button>
+        </div>
+        <div class="item-container">
+            <div class="item"></div>
+            <h2>ITEM NAME</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur facilisis tincidunt. Ut
+                blandit arcu volutpat lacus vulputate, a commodo. </p>
+            <button class="button-remove"></button>
+            <button class="button-add"></button>
+        </div>
+        <div class="item-container">
+            <div class="item"></div>
+            <h2>ITEM NAME</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur facilisis tincidunt. Ut
+                blandit arcu volutpat lacus vulputate, a commodo. </p>
+            <button class="button-remove"></button>
+            <button class="button-add"></button>
+        </div>
+        <div class="item-container">
+            <div class="item"></div>
+            <h2>ITEM NAME</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur facilisis tincidunt. Ut
+                blandit arcu volutpat lacus vulputate, a commodo. </p>
+            <button class="button-remove"></button>
+            <button class="button-add"></button>
+        </div>
+        <div class="item-container">
+            <div class="item"></div>
+            <h2>ITEM NAME</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur facilisis tincidunt. Ut
+                blandit arcu volutpat lacus vulputate, a commodo. </p>
+            <button class="button-remove"></button>
+            <button class="button-add"></button>
+        </div>
+        <div class="item-container">
+            <div class="item"></div>
+            <h2>ITEM NAME</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur facilisis tincidunt. Ut
+                blandit arcu volutpat lacus vulputate, a commodo. </p>
+            <button class="button-remove"></button>
+            <button class="button-add"></button>
+        </div>
+    </div>
 </main>
 
 <footer>
