@@ -119,7 +119,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  color: $text-primary;
 }
 
 // Header items
@@ -173,6 +173,46 @@ footer {
   width: 100%;
   height: 15%;
   background: $accent;
+}
+
+// Footer items
+
+.icons-credit {
+  color: $text-primary;
+  opacity: 50%;
+  font: {
+    family: 'poppins-bold', 'sans-serif';
+    size: 0.9vw;
+  }
+}
+
+.icons-credit:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  color: $text-primary;
+  font: {
+    family: 'speedee', 'sans-serif';
+    size: 1.1vw;
+  }
+}
+
+.socials {
+  display: flex;
+  gap: 1.1vw;
+  user-select: none;
+  width: fit-content;
+
+  img {
+    max-width: 2.6vw;
+    min-width: 2.6vw;
+  }
+
+  a {
+    display: grid;
+    place-items: center;
+  }
 }
 
 // Home items
@@ -252,6 +292,17 @@ footer {
   margin: -75vh 0 60vh;
 
   @include text-box();
+}
+
+// Order items
+
+.title {
+  margin: 10vh 0;
+  font: {
+    size: 5vw;
+    family: 'poppins-bold', 'sans-serif';
+  }
+  color: $text-secondary;
 }
 
 // Misc items

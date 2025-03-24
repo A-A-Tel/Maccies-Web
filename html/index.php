@@ -58,7 +58,7 @@
     </div>
     <div class="cafe-description-box">
         <h2>McCafé bij u in de buurt.</h2>
-        <p>McDonald's brijd veel andere resaurants uit met McCafé. Hier zal een van onze geweldige en vriendelijke
+        <p>McDonald's breid veel andere restaurants uit met McCafé. Hier zal een van onze geweldige en vriendelijke
             crewleden uw koffie persoonlijk maken. Wij bieden veel keuzes in soorten koffie, soorten melk en
             versnaperingen zoals appeltaarten en brownies</p>
         <button onclick="window.location.href='/order/';" class="building-button">Bestel nu</button>
@@ -66,7 +66,31 @@
 
 </main>
 
-<footer></footer>
+<footer>
+    <a id="credit" target="_blank" class="icons-credit" href="https://www.icons8.com">Icons by Icons8</a>
+    <span class="copyright">Takeaway & McDonald's &copy; 2025</span>
+    <div id="socials" class="socials">
+        <a href="https://www.youtube.com/channel/UCRI5ZedBs0_BYY4PlxD6m7w" target="_blank">
+            <img src="/images/youtube.svg" alt="youtube image">
+        </a>
+        <a href="https://www.snapchat.com/add/mcdonalds" target="_blank">
+            <img src="/images/snapchat.svg" alt="snapchat image">
+        </a>
+        <a href="https://www.linkedin.com/company/mcdonald's-corporation" target="_blank">
+            <img src="/images/linkedin.svg" alt="linkedin image">
+        </a>
+        <a href="https://www.facebook.com/McDonalds" target="_blank">
+            <img src="/images/facebook.svg" alt="facebook image">
+        </a>
+        <a href="https://www.instagram.com/mcdonalds/" target="_blank">
+            <img src="/images/instagram.svg" alt="instagram image">
+        </a>
+        <a href="https://twitter.com/McDonalds" target="_blank">
+            <img src="/images/twitter.svg" alt="twitter image">
+        </a>
+    </div>
+</footer>
+<script src="/js/main.js"></script>
 
 </body>
 </html>
