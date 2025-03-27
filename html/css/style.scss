@@ -72,6 +72,14 @@ img {
   user-select: none;
 }
 
+input::-webkit-inner-spin-button, input::-webkit-outer-spin-button {
+  display: none;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
 h1, h2, h3, h4, h5, h6, p {
   font: inherit;
 }
@@ -159,10 +167,18 @@ footer {
     user-select: none;
   }
 
+  li {
+    transition: margin 0.5s;
+  }
+
   font: {
     family: 'poppins-regular', 'sans-serif';
     size: 1.4vw;
   }
+}
+
+.menu li:hover {
+  margin: -1vh 0 1vh 0;
 }
 
 .current-page {
@@ -170,6 +186,8 @@ footer {
   width: fit-content;
   position: relative;
 }
+
+
 
 .current-page::after {
   position: absolute;
@@ -432,6 +450,68 @@ footer {
 
 .button-edit {
   background: $accent;
+}
+
+// Booking items
+
+.form-booking {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  background: $primary;
+  padding: 2vw;
+  height: fit-content;
+  width: 40vw;
+  border-radius: 1vw;
+  margin-bottom: 15vw;
+}
+
+.form-booking-item {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  align-items: center;
+  gap: 1vw;
+  margin: 2vw 0;
+
+  h2 {
+    width: 100%;
+    text-align: center;
+    color: $text-secondary;
+    font: {
+      family: 'poppins-regular', 'sans-serif';
+      size: 2.3vw;
+    }
+  }
+  input {
+    width: 60%;
+    background: {
+      color: $light-primary;
+      image: none;
+    }
+    border: {
+      width: 0;
+      style: none;
+      radius: 1vw;
+    }
+    font: {
+      family: 'poppins-regular', 'sans-serif';
+      size: 1.3vw;
+    }
+    padding: 1vw
+  }
+}
+
+.button-datepicker {
+  position: relative;
+}
+
+.cursor-caret {
+  cursor: text;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 // Misc items

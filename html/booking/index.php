@@ -23,6 +23,37 @@
     <button class="login-button">Login</button>
 </header>
 
+<main>
+    <h1 class="title">Wilt u reserveren?</h1>
+
+    <form class="form-booking" action="">
+        <div class="form-booking-item">
+            <h2>Datum</h2>
+            <input class="cursor-caret" placeholder="dd/mm/yyyy" required type="date" name="Reservation date" id="0">
+        </div>
+        <div class="form-booking-item">
+            <h2>Aantal mensen</h2>
+            <input required type="number" name="amount" id="1">
+        </div>
+        <div class="form-booking-item">
+            <h2>Reservering naam</h2>
+            <input required type="text" name="name" id="2">
+        </div>
+        <div class="form-booking-item">
+            <h2>Telefoonnummer</h2>
+            <input required type="number" name="name" id="3">
+        </div>
+        <div class="form-booking-item">
+            <h2>Email</h2>
+            <input required type="email" name="name" id="4">
+        </div>
+
+        <div class="form-booking-item">
+            <input class="cursor-pointer" type="submit" value="Reserveren">
+        </div>
+    </form>
+</main>
+
 <footer>
     <a id="credit" target="_blank" class="icons-credit" href="https://www.icons8.com">Icons by Icons8</a>
     <span class="copyright">Takeaway & McDonald's &copy; 2025</span>
