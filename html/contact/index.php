@@ -23,6 +23,22 @@
     <button class="login-button">Login</button>
 </header>
 
+<main>
+    <div class="contact-box">
+        <h2>Neem contact met ons op met deze methodes</h2>
+        <div class="contact-list">
+            <div class="contact-item">
+                <img src="/images/phone.svg" alt="phone image">
+                <a href="tel:+310205642666">+31 020-5642666</a>
+            </div>
+            <div class="contact-item">
+                <img src="/images/mail.svg" alt="mail image">
+                <a href="mailto:gastenrelaties@nl.mcd.com">gastenrelaties@nl.mcd.com</a>
+            </div>
+        </div>
+    </div>
+</main>
+
 <footer>
     <a id="credit" target="_blank" class="icons-credit" href="https://www.icons8.com">Icons by Icons8</a>
     <span class="copyright">Takeaway & McDonald's &copy; 2025</span>

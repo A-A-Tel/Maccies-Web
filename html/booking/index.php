@@ -26,28 +26,27 @@
 <main>
     <h1 class="title">Wilt u reserveren?</h1>
 
-    <form class="form-booking" action="">
+    <form class="form-booking" action="/php/booking_submit.php" method="POST">
         <div class="form-booking-item">
             <h2>Datum</h2>
-            <input class="cursor-caret" placeholder="dd/mm/yyyy" required type="date" name="Reservation date" id="0">
+            <input required type="date" name="date">
         </div>
         <div class="form-booking-item">
             <h2>Aantal mensen</h2>
-            <input required type="number" name="amount" id="1">
+            <input required type="number" name="amount">
         </div>
         <div class="form-booking-item">
             <h2>Reservering naam</h2>
-            <input required type="text" name="name" id="2">
+            <input required type="text" name="name">
         </div>
         <div class="form-booking-item">
             <h2>Telefoonnummer</h2>
-            <input required type="number" name="name" id="3">
+            <input required type="number" name="phone">
         </div>
         <div class="form-booking-item">
             <h2>Email</h2>
-            <input required type="email" name="name" id="4">
+            <input required type="email" name="email">
         </div>
-
         <div class="form-booking-item">
             <input class="cursor-pointer" type="submit" value="Reserveren">
         </div>

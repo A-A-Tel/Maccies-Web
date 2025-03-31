@@ -90,6 +90,11 @@ button {
   background: none;
   cursor: pointer;
   padding: 0;
+  transition: scale 0.5s;
+}
+
+button:hover {
+  scale: 1.2;
 }
 
 body {
@@ -123,7 +128,7 @@ main {
 
 footer {
   width: 100%;
-  height: 25vh;
+  height: 20vh;
   padding: 2vh 6vw;
   background: $dark-primary;
   display: flex;
@@ -186,8 +191,6 @@ footer {
   width: fit-content;
   position: relative;
 }
-
-
 
 .current-page::after {
   position: absolute;
@@ -512,6 +515,39 @@ footer {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+// Contact items
+
+.contact-box {
+  @include text-box();
+
+  background: $primary;
+  h2 {
+    font-size: 2vw;
+  }
+  border-radius: 1vw;
+  height: fit-content;
+  width: 35vw;
+  margin: 25vh 0;
+}
+
+.contact-list {
+  flex-flow: column wrap;
+  width: 30vw;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    font: {
+      family: 'poppins-regular', 'sans-serif';
+      size: 1.3vw;
+    }
+  }
 }
 
 // Misc items
