@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<header>
+    <a href="/"><img class="logo" src="/images/logo.png" alt="logo image"></a>
+
+    <ul class="menu">
+        <li class="current-page"><a href="/">Home</a></li>
+        <li><a href="/order/">Bestellen</a></li>
+        <li><a href="/booking/">Reserveren</a></li>
+        <li><a href="/contact/">Contact opnemen</a></li>
+    </ul>
+    <img class="logo hidden" src="/images/logo.png" alt="logo align image">
+
+    <button onclick="showModal('/modals/login.html')" class="login-button">Login</button>
+</header>
+
+<main>
+    <div class="burger-container">
+        <img src="/images/sensation.png" alt="chicken sensation image">
+
+        <div class="burger-description-box">
+            <h2>Bij de McDonald's hebben wij jouw nieuwe favoriete burger.</h2>
+            <p>Hier hebben we een gerecht voor iedereen hun smaken. Zin in kip? Beef? Salade? Bij de McDonald's hebben
+                we het. Check ook onze app voor allerlei kortingen en deals.</p>
+        </div>
+    </div>
+
+    <div class="building-container">
+        <img src="/images/mcd-eu.png" alt="european mcdonald's">
+        <img src="/images/mcd-us.png" alt="american mcdonald's">
+    </div>
+    <div class="building-description-box">
+        <h2>Wij hebben restaurants over de hele wereld.</h2>
+        <p>Al bent u aan het genieten in de staten, de prachtige landschappen van Japan, de Lage Landen langs the
+            Europese kust of the kleine eilanden van Hawaii, er is altijd een McDonald's bij u in de buurt.</p>
+
+        <button onclick="window.open('https://www.google.com/maps/search/McDonald\'s');" class="building-button">Bekijk
+            locaties
+        </button>
+    </div>
+
+    <div class="building-container">
+        <img src="/images/cafe-drinks.png" alt="cafe drinks image">
+        <img src="/images/cafe-croissant.png" alt="cafe croissant image">
+    </div>
+    <div class="cafe-container">
+        <img src="/images/cafe-worker-happy.png"
+             alt="cafe happy worker who is very happy working smiling happiness image">
+        <img src="/images/cafe-counter.png" alt="cafe counter image">
+    </div>
+    <div class="cafe-description-box">
+        <h2>McCafé bij u in de buurt.</h2>
+        <p>McDonald's breid veel andere restaurants uit met McCafé. Hier zal een van onze geweldige en vriendelijke
+            crewleden uw koffie persoonlijk maken. Wij bieden veel keuzes in soorten koffie, soorten melk en
+            versnaperingen zoals appeltaarten en brownies</p>
+        <button onclick="window.location.href='/order/';" class="building-button">Bestel nu</button>
+    </div>
+
+</main>
+
+<footer>
+    <a id="credit" target="_blank" class="icons-credit" href="https://www.icons8.com">Icons by Icons8</a>
+    <span class="copyright">Takeaway & McDonald's &copy; 2025</span>
+    <div id="socials" class="socials">
+        <a href="https://www.youtube.com/channel/UCRI5ZedBs0_BYY4PlxD6m7w" target="_blank">
+            <img src="/images/youtube.svg" alt="youtube image">
+        </a>
+        <a href="https://www.snapchat.com/add/mcdonalds" target="_blank">
+            <img src="/images/snapchat.svg" alt="snapchat image">
+        </a>
+        <a href="https://www.linkedin.com/company/mcdonald's-corporation" target="_blank">
+            <img src="/images/linkedin.svg" alt="linkedin image">
+        </a>
+        <a href="https://www.facebook.com/McDonalds" target="_blank">
+            <img src="/images/facebook.svg" alt="facebook image">
+        </a>
+        <a href="https://www.instagram.com/mcdonalds/" target="_blank">
+            <img src="/images/instagram.svg" alt="instagram image">
+        </a>
+        <a href="https://twitter.com/McDonalds" target="_blank">
+            <img src="/images/twitter.svg" alt="twitter image">
+        </a>
+    </div>
+</footer>
+<script src="/js/main.js"></script>
+
+</body>
+</html>

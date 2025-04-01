@@ -1,5 +1,6 @@
 <?php
-require_once "db_connect.php";
+
+require_once 'db_connect.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $date = $_POST["date"];
@@ -9,13 +10,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
 
     $sql = "INSERT INTO booking (date, amount, name, phone, email) VALUES (?, ?, ?, ?, ?)";
-    global $conn;
+    $db = new db_connect();
+    $conn = $db->get_connection();
 
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sisss", $date, $amount, $name, $phone, $email);
+    $stmt->bind_param("sssss", $date, $amount, $name, $phone, $email);
 
     if ($stmt->execute()) {
-        header("Location: /booking/?success=1");
+        header("Location: /booking/");
         exit;
     } else {
         die("Execution failed: " . $stmt->error);

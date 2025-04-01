@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, h6, p {
   font: inherit;
 }
 
-button {
+button, input {
   border: none;
   outline: none;
   background: none;
@@ -240,7 +240,12 @@ footer {
   a {
     display: grid;
     place-items: center;
+    transition: scale 0.5s;
   }
+}
+
+.socials a:hover {
+  scale: 1.2;
 }
 
 // Home items
@@ -509,18 +514,13 @@ footer {
   position: relative;
 }
 
-.cursor-caret {
-  cursor: text;
-}
-
-.cursor-pointer {
-  cursor: pointer;
-}
-
 // Contact items
 
 .contact-box {
   @include text-box();
+  display: flex;
+  flex-flow: column wrap;
+  gap: 3vw;
 
   background: $primary;
   h2 {
@@ -533,7 +533,9 @@ footer {
 }
 
 .contact-list {
+  display: flex;
   flex-flow: column wrap;
+  gap: 1vw;
   width: 30vw;
 }
 
@@ -550,8 +552,54 @@ footer {
   }
 }
 
+// Login items
+
+.login-modal {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+
+  form {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    background: $dark-primary;
+    padding: 2vw;
+    border-radius: 1vw;
+    height: fit-content;
+    width: fit-content;
+    gap: 1vw;
+
+    input {
+      background: $light-primary;
+      cursor: text;
+      border-radius: 0.7vw;
+      padding: 0.3vw;
+      font: {
+        family: 'poppins-regular', 'sans-serif';
+        size: 1.3vw;
+      }
+      width: 20vw;
+    }
+  }
+}
+
 // Misc items
 
 .hidden {
   visibility: hidden;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-caret {
+  cursor: text;
 }

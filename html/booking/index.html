@@ -15,28 +15,42 @@
     <ul class="menu">
         <li><a href="/">Home</a></li>
         <li><a href="/order/">Bestellen</a></li>
-        <li><a href="/booking/">Reserveren</a></li>
-        <li class="current-page"><a href="/contact/">Contact opnemen</a></li>
+        <li class="current-page"><a href="/booking/">Reserveren</a></li>
+        <li><a href="/contact/">Contact opnemen</a></li>
     </ul>
     <img class="logo hidden" src="/images/logo.png" alt="logo align image">
 
-    <button class="login-button">Login</button>
+    <button onclick="showModal('/modals/login.html')" class="login-button">Login</button>
 </header>
 
 <main>
-    <div class="contact-box">
-        <h2>Neem contact met ons op met deze methodes</h2>
-        <div class="contact-list">
-            <div class="contact-item">
-                <img src="/images/phone.svg" alt="phone image">
-                <a href="tel:+310205642666">+31 020-5642666</a>
-            </div>
-            <div class="contact-item">
-                <img src="/images/mail.svg" alt="mail image">
-                <a href="mailto:gastenrelaties@nl.mcd.com">gastenrelaties@nl.mcd.com</a>
-            </div>
+    <h1 class="title">Wilt u reserveren?</h1>
+
+    <form class="form-booking" action="/php/submit_booking.php" method="POST">
+        <div class="form-booking-item">
+            <h2>Datum</h2>
+            <input class="cursor-caret" required type="date" name="date">
         </div>
-    </div>
+        <div class="form-booking-item">
+            <h2>Aantal mensen</h2>
+            <input class="cursor-caret" required type="number" name="amount">
+        </div>
+        <div class="form-booking-item">
+            <h2>Reservering naam</h2>
+            <input class="cursor-caret" required type="text" name="name">
+        </div>
+        <div class="form-booking-item">
+            <h2>Telefoonnummer</h2>
+            <input class="cursor-caret" required type="number" name="phone">
+        </div>
+        <div class="form-booking-item">
+            <h2>Email</h2>
+            <input class="cursor-caret" required type="email" name="email">
+        </div>
+        <div class="form-booking-item">
+            <input class="cursor-pointer" type="submit" value="Reserveren">
+        </div>
+    </form>
 </main>
 
 <footer>

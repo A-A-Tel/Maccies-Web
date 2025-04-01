@@ -20,3 +20,23 @@ function resizeHeaderItems() {
 
 resizeHeaderItems();
 window.addEventListener("resize", resizeHeaderItems);
+
+function showModal(modalPath) {
+    disableScroll();
+    fetch(modalPath)
+        .then(response => response.text())
+        .then(html => {
+            document.body.innerHTML += html;
+        });
+}
+
+function disableScroll() {
+
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+    window.onscroll = function () {
+        window.scrollTo(scrollLeft, scrollTop);
+    };
+}
