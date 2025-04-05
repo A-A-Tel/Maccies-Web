@@ -32,11 +32,28 @@ function showModal(modalPath) {
 
 function disableScroll() {
 
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollTop = document.documentElement.scrollTop;
 
-    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+    const scrollLeft = document.documentElement.scrollLeft;
 
     window.onscroll = function () {
         window.scrollTo(scrollLeft, scrollTop);
     };
+}
+
+const contactDateElement = document.getElementById("contact-date");
+
+if (contactDateElement != null) {
+
+    let now = new Date();
+    now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+    contactDateElement.value = now.toISOString().slice(0, 16);
+}
+
+const menuItems = document.getElementsByClassName("item");
+
+for (let i = 0; i < menuItems.length; i++) {
+    const menuItem = menuItems[i];
+
+    menuItem.style.backgroundImage = "url(/images/items/" + menuItem.id + ".png)";
 }

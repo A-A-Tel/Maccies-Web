@@ -14,9 +14,9 @@
 
     <ul class="menu">
         <li><a href="/">Home</a></li>
-        <li><a href="/order/">Bestellen</a></li>
+        <li class="current-page"><a href="/order/">Bestellen</a></li>
         <li><a href="/booking/">Reserveren</a></li>
-        <li class="current-page"><a href="/contact/">Contact opnemen</a></li>
+        <li><a href="/contact/">Contact opnemen</a></li>
     </ul>
     <img class="logo hidden" src="/images/logo.png" alt="logo align image">
 
@@ -24,43 +24,42 @@
 </header>
 
 <main>
-    <div class="contact-box">
-        <h2>Neem contact met ons op met deze methodes</h2>
-        <div class="contact-list">
-            <div class="contact-item">
-                <img src="/images/phone.svg" alt="phone image">
-                <a href="tel:+310205642666">+31 020-5642666</a>
-            </div>
-            <div class="contact-item">
-                <img src="/images/mail.svg" alt="mail image">
-                <a href="mailto:gastenrelaties@nl.mcd.com">gastenrelaties@nl.mcd.com</a>
-            </div>
-        </div>
+    <h1 class="title">Waar heeft u vandaag zin in?</h1>
+    <div class="cart">
+        <img src="/images/cart.svg" alt="cart image">
+        <div class="cart-amount">X</div>
+    </div>
+    <div class="category-bar">
     </div>
 
-    <form class="form-booking" action="/php/submit.php" method="POST">
-        <input type="hidden" name="type" value="contact">
-        <input class="no-render" required type="datetime-local" name="datetime" id="contact-date">
-        <div class="form-booking-item">
-            <h2>Naam</h2>
-            <input class="cursor-caret" required type="text" name="name">
+    <div class="item-list">
+        <?php
+
+        require_once '../php/data_menu.php';
+        require_once '../php/db.php';
+
+        $db = new db();
+        $template = '
+        <div class="item-container">
+            <div id="%s" price="€%s" class="item"></div>
+            <h2>%s</h2>
+            <p>%s</p>
+            <button class="button-remove"></button>
+            <button class="button-add"></button>
         </div>
-        <div class="form-booking-item">
-            <h2>Email</h2>
-            <input class="cursor-caret" required type="email" name="email">
-        </div>
-        <div class="form-booking-item">
-            <h2>Telefoonnummer</h2>
-            <input class="cursor-caret" required type="number" name="phone">
-        </div>
-        <div class="form-booking-item">
-            <h2>Bericht</h2>
-            <textarea class="cursor-pointer" name="message"></textarea>
-        </div>
-        <div class="form-booking-item">
-            <input class="cursor-pointer" type="submit" value="Reserveren">
-        </div>
-    </form>
+        ';
+
+        foreach ($db->get_menus() as $menu) {
+            $id = $menu->get_id();
+            $name = $menu->get_name();
+            $description = $menu->get_description();
+            $price = $menu->get_price();
+
+            echo sprintf($template, $id, $price, $name, $description);
+        }
+
+        ?>
+    </div>
 </main>
 
 <footer>

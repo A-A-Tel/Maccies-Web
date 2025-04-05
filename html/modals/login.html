@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-<div id="modal" class='login-modal'>
-    <form action='/admin/' method='POST'>
-        <input required type='text' name='user' placeholder='Username'>
-        <input required type='text' name='pass' placeholder='Password'>
+<div id="modal" class='modal login-modal'>
+    <form action='/php/submit.php' method='POST'>
+        <input type="hidden" name="type" value="login">
+        <input required type='text' name='username' placeholder='Username'>
+        <input required type='password' name='password' placeholder='Password'>
         <input class='cursor-pointer' type='submit' value='Inloggen'>
     </form>
 </div>

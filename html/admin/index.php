@@ -1,13 +1,28 @@
-<!doctype html>
+<?php
+
+set_error_handler(function () {});
+
+session_start();
+$isLoggedIn = (bool) $_SESSION["valid_session"];
+
+if (!$isLoggedIn) {
+    header("location: /");
+    exit;
+}
+
+restore_error_handler();
+
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Order</title>
+    <title>Home</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body class="admin">
 
 <header>
     <a href="/"><img class="logo" src="/images/logo.png" alt="logo image"></a>
@@ -15,43 +30,43 @@
     <ul class="menu">
         <li><a href="/">Home</a></li>
         <li><a href="/order/">Bestellen</a></li>
-        <li class="current-page"><a href="/booking/">Reserveren</a></li>
+        <li><a href="/booking/">Reserveren</a></li>
         <li><a href="/contact/">Contact opnemen</a></li>
     </ul>
     <img class="logo hidden" src="/images/logo.png" alt="logo align image">
 
-    <button onclick="showModal('/modals/login.html')" class="login-button">Login</button>
+    <button onclick="window.location.href='/php/logout.php'" class="login-button">Logout</button>
 </header>
 
 <main>
-    <h1 class="title">Wilt u reserveren?</h1>
+    <div class="item-list">
+        <?php
 
-    <form class="form-booking" action="/php/submit.php" method="POST">
-        <input type="hidden" name="type" value="booking">
-        <div class="form-booking-item">
-            <h2>Datum</h2>
-            <input class="cursor-caret" required type="datetime-local" name="datetime">
+        require_once '../php/data_menu.php';
+        require_once '../php/db.php';
+
+        $db = new db();
+        $template = '
+        <div class="item-container">
+            <div id="%s" price="€%s" class="item"></div>
+            <h2>%s</h2>
+            <p>%s</p>
+            <button class="button-delete"></button>
+            <button class="button-edit"></button>
         </div>
-        <div class="form-booking-item">
-            <h2>Aantal mensen</h2>
-            <input class="cursor-caret" required type="number" name="amount">
-        </div>
-        <div class="form-booking-item">
-            <h2>Reservering naam</h2>
-            <input class="cursor-caret" required type="text" name="name">
-        </div>
-        <div class="form-booking-item">
-            <h2>Telefoonnummer</h2>
-            <input class="cursor-caret" required type="number" name="phone">
-        </div>
-        <div class="form-booking-item">
-            <h2>Email</h2>
-            <input class="cursor-caret" required type="email" name="email">
-        </div>
-        <div class="form-booking-item">
-            <input class="cursor-pointer" type="submit" value="Reserveren">
-        </div>
-    </form>
+        ';
+
+        foreach ($db->get_menus() as $menu) {
+            $id = $menu->get_id();
+            $name = $menu->get_name();
+            $description = $menu->get_description();
+            $price = $menu->get_price();
+
+            echo sprintf($template, $id, $price, $name, $description);
+        }
+
+        ?>
+    </div>
 </main>
 
 <footer>
