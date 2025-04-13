@@ -439,6 +439,26 @@ footer {
   }
 }
 
+.search {
+  margin: 0 auto;
+
+  input {
+    border: {
+      radius: 1.5vw;
+      width: 1vw;
+      color: $text-secondary;
+
+    }
+
+    font: {
+      family: 'poppins-regular', 'sans-serif';
+      size: 1vw;
+    }
+    cursor: text;
+    padding: 1vw;
+  }
+}
+
 .button-add, .button-remove, .button-edit, .button-delete {
   width: 7vw;
   height: 3vw;

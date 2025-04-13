@@ -30,12 +30,14 @@
         <div class="cart-amount">X</div>
     </div>
     <div class="category-bar">
+        <form action="index.php" class="search" method="POST">
+            <input placeholder="Zoeken" type="text" name="search">
+        </form>
     </div>
 
     <div class="item-list">
         <?php
 
-        require_once '../php/data_menu.php';
         require_once '../php/db.php';
 
         $db = new db();
@@ -49,15 +51,12 @@
         </div>
         ';
 
-        foreach ($db->get_menus() as $menu) {
-            $id = $menu->get_id();
-            $name = $menu->get_name();
-            $description = $menu->get_description();
-            $price = $menu->get_price();
+        $sql = 'SELECT * FROM menu ORDER BY id ASC';
+        $query = $db->get_connection()->query($sql);
 
-            echo sprintf($template, $id, $price, $name, $description);
+        foreach ($query as $row) {
+            echo sprintf($template, $row['id'], $row['price'], $row['name'], $row['description']);
         }
-
         ?>
     </div>
 </main>

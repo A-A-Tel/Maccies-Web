@@ -1,17 +1,9 @@
 <?php
 
-set_error_handler(function () {});
+require_once "../php/db.php";
 
-session_start();
-$isLoggedIn = (bool) $_SESSION["valid_session"];
-
-if (!$isLoggedIn) {
-    header("location: /");
-    exit;
-}
-
-restore_error_handler();
-
+$db = new db();
+$db->validate_session();
 ?>
 
 <!DOCTYPE html>
@@ -39,32 +31,46 @@ restore_error_handler();
 </header>
 
 <main>
+
+
+    <div class="category-bar">
+
+        <form action="index.php" class="search" method="POST">
+            <input placeholder="Zoeken" type="text" name="search">
+        </form>
+    </div>
+
     <div class="item-list">
+
+        <div class="item-container">
+            <div id="placeholder" class="item"></div>
+            <h2>Item toevoegen</h2>
+            <p>----</p>
+            <button onclick="showModal('/modals/add-item.php');" class="button-add"></button>
+        </div>
+
         <?php
-
-        require_once '../php/data_menu.php';
-        require_once '../php/db.php';
-
-        $db = new db();
         $template = '
         <div class="item-container">
             <div id="%s" price="€%s" class="item"></div>
             <h2>%s</h2>
             <p>%s</p>
-            <button class="button-delete"></button>
-            <button class="button-edit"></button>
+            <form action="/php/delete.php" method="POST">
+                <input type="hidden" name="table" value="menu">
+                <input type="hidden" name="id" value="%s">
+                <input type="submit" class="button-delete" value="">
+            </form>
+            <button class="button-edit" onclick="showModal(\'/modals/add-item.php\', true, [\'%s\', \'%s\', \'%s\', \'%s\'])"></button>
         </div>
         ';
 
-        foreach ($db->get_menus() as $menu) {
-            $id = $menu->get_id();
-            $name = $menu->get_name();
-            $description = $menu->get_description();
-            $price = $menu->get_price();
+        $sql = "SELECT * FROM menu ORDER BY id ASC";
+        $query = $db->get_connection()->query($sql);
 
-            echo sprintf($template, $id, $price, $name, $description);
+        foreach ($query as $row) {
+
+            echo sprintf($template, $row['id'], $row['price'], $row['name'], $row['description'], $row['id'], $row['id'], $row['name'], $row['description'], $row['price']);
         }
-
         ?>
     </div>
 </main>

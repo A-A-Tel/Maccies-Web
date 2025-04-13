@@ -38,9 +38,8 @@
         </div>
     </div>
 
-    <form class="form-booking" action="/php/submit.php" method="POST">
-        <input type="hidden" name="type" value="contact">
-        <input class="no-render" required type="datetime-local" name="datetime" id="contact-date">
+    <form class="form-booking" action="/php/add_contact.php" method="POST">
+        <input class="no-render" required type="datetime-local" name="datetime" id="datetime">
         <div class="form-booking-item">
             <h2>Naam</h2>
             <input class="cursor-caret" required type="text" name="name">

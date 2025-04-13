@@ -26,11 +26,10 @@
 <main>
     <h1 class="title">Wilt u reserveren?</h1>
 
-    <form class="form-booking" action="/php/submit.php" method="POST">
-        <input type="hidden" name="type" value="booking">
+    <form class="form-booking" action="/php/add_booking.php" method="POST">
         <div class="form-booking-item">
             <h2>Datum</h2>
-            <input class="cursor-caret" required type="datetime-local" name="datetime">
+            <input id="datetime" class="cursor-caret" required type="datetime-local" name="datetime">
         </div>
         <div class="form-booking-item">
             <h2>Aantal mensen</h2>
