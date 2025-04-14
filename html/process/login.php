@@ -8,15 +8,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $_POST["username"];
     $pass = $_POST["password"];
 
-    $sql = "SELECT * FROM users ORDER BY id ASC";
-    $query = $db->get_connection()->query($sql);
+    $sql = "SELECT * FROM users WHERE name='$user'";
+    $row = $db->get_connection()->query($sql)->fetch();
 
-    foreach ($query as $row) {
-        if ($row["username"] == $user && $row["password"] == $pass) {
-            session_start();
-            $_SESSION['valid_user'] = true;
-            header("location: /admin/");
-            exit;
-        }
+    if ($row != null && $row["password"] == $pass) {
+        session_start();
+        $_SESSION['valid_user'] = true;
+        header("location: /admin/");
+        exit;
     }
 }
+header("location: /");
