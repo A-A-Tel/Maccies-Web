@@ -51,7 +51,15 @@
         </div>
         ';
 
-        $sql = 'SELECT * FROM menu ORDER BY id ASC';
+        $sql = "SELECT * FROM menu";
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $search = $_POST['search'];
+            $sql .= " WHERE name LIKE '%" . $search . "%'";
+        }
+        $sql .= " ORDER BY id ASC";
+
+
         $query = $db->get_connection()->query($sql);
 
         foreach ($query as $row) {

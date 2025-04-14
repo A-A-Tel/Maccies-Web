@@ -17,7 +17,7 @@ $db->validate_session();
 <body class="admin">
 
 <header>
-    <a href="/"><img class="logo" src="/images/logo.png" alt="logo image"></a>
+    <a href="/admin/"><img class="logo" src="/images/logo.png" alt="logo image"></a>
 
     <ul class="menu">
         <li><a href="/">Home</a></li>
@@ -32,6 +32,72 @@ $db->validate_session();
 
 <main>
 
+    <div class="booking-contact-container">
+        <div class="booking-contact">
+            <?php
+
+            $template = '
+            <div class="item-container">
+                <h2>Naam: %s</h2>
+                <p>
+                    Datum en Tijd: %s
+                    <br>
+                    Aantal mensen: %s
+                    <br>
+                    Telefoonnummer: %s
+                    <br>
+                    Email-Adres: %s
+                </p>
+                <form action="/php/delete.php" method="POST">
+                    <input type="hidden" name="table" value="booking">
+                    <input type="hidden" name="id" value="%s">
+                    <input type="submit" class="button-delete" value="">
+                </form>
+            </div>';
+
+            $sql = "SELECT * FROM booking ORDER BY datetime ASC";
+            $query = $db->get_connection()->query($sql);
+
+            foreach ($query as $row) {
+                echo sprintf($template, $row['name'], $row['datetime'], $row['amount'], $row['phone'], $row['email'], $row['id']);
+            }
+            ?>
+        </div>
+
+        <div class="booking-contact">
+            <?php
+
+            $template = '<div class="item-container">
+                <h2>Naam: %s</h2>
+                <p>
+                    Verstuurdatum: %s
+                    <br>
+                    Email-Adres: %s
+                    <br>
+                    Telefoonnummer: %s
+                    <br>
+                    Bericht: %s
+                </p>
+                <form action="/php/delete.php" method="POST">
+                    <input type="hidden" name="table" value="contact">
+                    <input type="hidden" name="id" value="%s">
+                    <input type="submit" class="button-delete" value="">
+                </form>
+                <form action="/php/reply_contact.php" method="POST">
+                    <input type="hidden" name="id" value="%s">
+                    <input type="submit" class="button-accept" value="">
+                </form>
+            </div>';
+
+            $sql = "SELECT * FROM contact WHERE replied=0 ORDER BY datetime ASC";
+            $query = $db->get_connection()->query($sql);
+
+            foreach ($query as $row) {
+                echo sprintf($template, $row['name'], $row['datetime'], $row['email'], $row['phone'], $row['message'], $row['id'], $row['id']);
+            }
+            ?>
+        </div>
+    </div>
 
     <div class="category-bar">
 
@@ -64,7 +130,14 @@ $db->validate_session();
         </div>
         ';
 
-        $sql = "SELECT * FROM menu ORDER BY id ASC";
+        $sql = "SELECT * FROM menu";
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $search = $_POST['search'];
+            $sql .= " WHERE name LIKE '%" . $search . "%'";
+        }
+        $sql .= " ORDER BY id ASC";
+
         $query = $db->get_connection()->query($sql);
 
         foreach ($query as $row) {
