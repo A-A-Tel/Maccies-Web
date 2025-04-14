@@ -1,6 +1,6 @@
 <?php
 
-require_once "../php/db.php";
+require_once "../process/db.php";
 
 $db = new db();
 $db->validate_session();
@@ -27,7 +27,7 @@ $db->validate_session();
     </ul>
     <img class="logo hidden" src="/images/logo.png" alt="logo align image">
 
-    <button onclick="window.location.href='/php/logout.php'" class="login-button">Logout</button>
+    <button onclick="window.location.href='/process/logout.php'" class="login-button">Logout</button>
 </header>
 
 <main>
@@ -48,7 +48,7 @@ $db->validate_session();
                     <br>
                     Email-Adres: %s
                 </p>
-                <form action="/php/delete.php" method="POST">
+                <form action="/process/delete.php" method="POST">
                     <input type="hidden" name="table" value="booking">
                     <input type="hidden" name="id" value="%s">
                     <input type="submit" class="button-delete" value="">
@@ -78,12 +78,12 @@ $db->validate_session();
                     <br>
                     Bericht: %s
                 </p>
-                <form action="/php/delete.php" method="POST">
+                <form action="/process/delete.php" method="POST">
                     <input type="hidden" name="table" value="contact">
                     <input type="hidden" name="id" value="%s">
                     <input type="submit" class="button-delete" value="">
                 </form>
-                <form action="/php/reply_contact.php" method="POST">
+                <form action="/process/reply_contact.php" method="POST">
                     <input type="hidden" name="id" value="%s">
                     <input type="submit" class="button-accept" value="">
                 </form>
@@ -121,7 +121,7 @@ $db->validate_session();
             <div id="%s" price="€%s" class="item"></div>
             <h2>%s</h2>
             <p>%s</p>
-            <form action="/php/delete.php" method="POST">
+            <form action="/process/delete.php" method="POST">
                 <input type="hidden" name="table" value="menu">
                 <input type="hidden" name="id" value="%s">
                 <input type="submit" class="button-delete" value="">

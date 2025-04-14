@@ -1,12 +1,12 @@
 <?php
 
-require_once '../php/db.php';
+require_once '../process/db.php';
 (new db())->validate_session();
 
 ?>
 
 <div id="modal" class="modal add-modal">
-    <form id="modal-form" action="/php/add_menu.php" method="POST" enctype='multipart/form-data'>
+    <form id="modal-form" action="/process/add_menu.php" method="POST" enctype='multipart/form-data'>
         <input type="hidden" name="id" id="item-id" value="">
         <div class="add-column">
             <input id="item-name" required class="add-input" type="text" name="name" placeholder="Item naam">

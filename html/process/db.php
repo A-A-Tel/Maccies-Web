@@ -2,6 +2,7 @@
 
 class db {
 // Hele mooie DB class of niet?
+
     private PDO $pdo;
 
     public function __construct()

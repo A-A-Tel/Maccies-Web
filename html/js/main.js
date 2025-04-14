@@ -73,5 +73,5 @@ function fillEditMenuModal(values = ['']) {
     setValue('item-description', values[2]);
     setValue('item-price', values[3]);
     document.getElementById('item-image').classList.add('no-render');
-    document.getElementById('modal-form').action = '/php/edit_menu.php';
+    document.getElementById('modal-form').action = '/process/edit_menu.php';
 }

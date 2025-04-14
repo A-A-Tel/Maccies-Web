@@ -38,7 +38,7 @@
     <div class="item-list">
         <?php
 
-        require_once '../php/db.php';
+        require_once '../process/db.php';
 
         $db = new db();
         $template = '
