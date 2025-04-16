@@ -6,7 +6,7 @@ $db = new db();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $_POST["username"];
     $pass = $_POST["password"];
-    $sql = "SELECT * FROM users WHERE username=':user'";
+    $sql = "SELECT * FROM users WHERE username=:user";
 
     $stmt = $db->get_connection()->prepare($sql);
     $stmt->execute([':user' => $user]);
