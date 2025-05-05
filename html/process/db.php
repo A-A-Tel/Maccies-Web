@@ -20,7 +20,8 @@ class db {
         return $this->pdo;
     }
 
-    public function validate_session(): void {
+    public function validate_session(): void
+    {
 
         if (session_status() == PHP_SESSION_NONE) session_start();
         if (!isset($_SESSION['valid_user'])) $_SESSION['valid_user'] = false;
