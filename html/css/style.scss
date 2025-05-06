@@ -15,7 +15,7 @@
 
 @mixin text-box() {
   color: $text-primary;
-  padding: 3vh 2vw;
+  padding: 2vw 2vw;
 
   h2 {
     font: {
@@ -24,7 +24,7 @@
     }
   }
   p {
-    margin-top: 2vh;
+    margin-top: 1.4vw;
     font: {
       family: 'poppins-regular', 'sans-serif';
       size: 1.1vw;
@@ -105,8 +105,8 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
-  height: 10vh;
-  padding: 2vh 3vw;
+  height: 8vw;
+  padding: 1vw 3vw;
   background: $dark-primary;
   display: flex;
   justify-content: space-between;
@@ -124,8 +124,8 @@ main {
 
 footer {
   width: 100%;
-  height: 20vh;
-  padding: 2vh 6vw;
+  height: 12vw;
+  padding: 1vw 6vw;
   background: $dark-primary;
   display: flex;
   justify-content: space-between;
@@ -135,15 +135,15 @@ footer {
 }
 
 .logo {
-  height: 6vh;
+  height: 4vw;
 }
 
 .login-button {
   width: 4vw;
-  height: 4vh;
+  height: 2vw;
   border-radius: 0.5vw;
   position: absolute;
-  top: 3vh;
+  top: 3vw;
   right: 5vw;
   background: $light-primary;
   color: $text-primary;
@@ -177,11 +177,11 @@ footer {
 }
 
 .menu li:hover {
-  margin: -1vh 0 1vh 0;
+  margin: -0.7vw 0 0.7vw 0;
 }
 
 .current-page {
-  margin: -1vh 0 1vh 0;
+  margin: -0.7vw 0 0.7vw 0;
   width: fit-content;
   position: relative;
 }
@@ -189,7 +189,7 @@ footer {
 .current-page::after {
   position: absolute;
   content: '';
-  bottom: -0.8vh;
+  bottom: -0.5vw;
   border-radius: 1vw;
   left: 0;
   width: 100%;
@@ -244,10 +244,10 @@ footer {
   display: flex;
   align-items: center;
   width: 100%;
-  margin-top: 13vh;
+  margin-top: 9vw;
 
   img {
-    height: 85vh;
+    height: 50vw;
     margin-left: -30vw;
   }
 }
@@ -256,7 +256,7 @@ footer {
   display: flex;
   flex-direction: column;
   width: 32vw;
-  height: 37vh;
+  height: 22vw;
   background: $primary;
   margin-left: -20vw;
   border-radius: 1vw;
@@ -266,7 +266,7 @@ footer {
 
 .building-container {
   display: flex;
-  margin-top: 13vh;
+  margin-top: 9vw;
   overflow: hidden;
 
   img {
@@ -276,8 +276,8 @@ footer {
 
 .building-description-box {
   width: 40vw;
-  height: 40vh;
-  margin-top: -20vh;
+  height: 25vw;
+  margin-top: -14vw;
   border-radius: 1vw;
   background: $primary;
 
@@ -286,11 +286,11 @@ footer {
 
 .building-button {
   width: 20vw;
-  height: 5vh;
+  height: 3.5vw;
   border-radius: 0.5vw;
   background: $light-primary;
   color: $text-primary;
-  margin: 4vh 8vw;
+  margin: 2.8vw 8vw;
 
   font: {
     family: 'poppins-bold', 'sans-serif';
@@ -309,16 +309,16 @@ footer {
 
 .cafe-description-box {
   width: 40vw;
-  height: 33vh;
+  height: 22vw;
   border-radius: 1vw;
   background: $primary;
-  margin: -75vh 0 60vh;
+  margin: -42vw 0 42vw;
 
   @include text-box();
 }
 
 .title {
-  margin: 10vh 0;
+  margin: 5vw 0;
   font: {
     size: 5vw;
     family: 'poppins-bold', 'sans-serif';
@@ -337,7 +337,7 @@ footer {
     border-radius: 50%;
     background: $accent;
     position: relative;
-    margin: -4vh 1vw 4vh -1vw;
+    margin: -2.3vw 1vw 2.3vw -1vw;
     display: grid;
     place-items: center;
     user-select: none;
@@ -357,7 +357,7 @@ footer {
   justify-content: center;
   gap: 2vw;
   width: 100%;
-  height: 6vh;
+  height: 3.1vw;
   background: $accent;
 
   button {
@@ -369,7 +369,7 @@ footer {
 }
 
 .item-list {
-  margin: 10vh auto;
+  margin: 4.6vw auto;
   display: flex;
   width: 79vw;
   gap: 5vw;
@@ -380,7 +380,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   width: 23vw;
-  gap: 3vh 1vw;
+  gap: 1.5vw 1vw;
 
   h2, p {
     width: 23vw;
@@ -544,7 +544,7 @@ footer {
   border-radius: 1vw;
   height: fit-content;
   width: 35vw;
-  margin: 25vh 0;
+  margin: 13vw 0;
 }
 
 .contact-list {
@@ -608,7 +608,7 @@ footer {
 .add-modal {
   form {
     width: 50vw;
-    height: 50vh;
+    height: 23vw;
     background: $secondary;
     border-radius: 1vw;
     display: flex;
@@ -622,14 +622,14 @@ footer {
   display: flex;
   flex-flow: column wrap;
   width: 20vw;
-  height: 40vh;
+  height: 21vw;
   justify-content: space-between;
 }
 
 .add-input, .add-textarea {
 
   width: 100%;
-  height: 5vh;
+  height: 2.5vw;
   background: $light-secondary;
   border-radius: 0.7vw;
   padding: 0.7vw;
@@ -653,14 +653,14 @@ footer {
 
 .add-image {
   border-radius: 0.7vw;
-  height: 30vh;
+  height: 15vw;
   width: 100%;
   background: #808080 url('/images/placeholder.png') no-repeat center / 100%;
 }
 
 .add-submit {
   width: 100%;
-  height: 5vh;
+  height: 2.5vw;
   background: $light-secondary;
   border-radius: 0.7vw;
   color: $text-primary;
