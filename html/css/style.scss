@@ -52,6 +52,10 @@ $text-secondary: #000000;
   padding: 0;
 }
 
+shopping-cart {
+  margin-right: 5vw;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -324,31 +328,6 @@ footer {
     family: 'poppins-bold', 'sans-serif';
   }
   color: $text-secondary;
-}
-
-.cart {
-
-  img {
-    width: 5vw;
-  }
-  div {
-    width: 2.7vw;
-    height: 2.7vw;
-    border-radius: 50%;
-    background: $accent;
-    position: relative;
-    margin: -2.3vw 1vw 2.3vw -1vw;
-    display: grid;
-    place-items: center;
-    user-select: none;
-
-    font: {
-      family: 'poppins-regular', 'sans-serif';
-      size: 1.5vw;
-    }
-  }
-  align-self: flex-end;
-  margin-right: 5vw;
 }
 
 .category-bar {

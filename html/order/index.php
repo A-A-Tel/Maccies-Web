@@ -20,15 +20,15 @@
     </ul>
     <img class="logo hidden" src="/images/logo.png" alt="logo align image">
 
-    <button onclick="showModal('/modals/login.html')" class="login-button">Login</button>
+    <script src="/js/LoginButton.js"></script>
+    <login-button></login-button>
 </header>
+
+<script src="/js/ShoppingCart.js"></script>
 
 <main>
     <h1 class="title">Waar heeft u vandaag zin in?</h1>
-    <div class="cart">
-        <img src="/images/cart.svg" alt="cart image">
-        <div class="cart-amount">X</div>
-    </div>
+    <shopping-cart num-of-items="0"></shopping-cart>
     <div class="category-bar">
         <form action="index.php" class="search" method="POST">
             <input placeholder="Zoeken" type="text" name="search">

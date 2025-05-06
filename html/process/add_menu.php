@@ -15,7 +15,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $valid =
         preg_match('/^[\p{L}\p{N}\p{P}\p{S}\p{Z}]+$/u', $name) &&
+
         preg_match('/^[\p{L}\p{N}\p{P}\p{S}\p{Z}]+$/u', $description) &&
+
         preg_match('/^[\p{L}\p{N}\p{P}\p{S}\p{Z}]+$/u', $price)
     ;
 
